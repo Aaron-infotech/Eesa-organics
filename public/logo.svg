@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" fill="none">
+  <defs>
+    <linearGradient id="leafGrad" x1="100" y1="20" x2="100" y2="130" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8DBE3E"/>
+      <stop offset="50%" stop-color="#4F9D35"/>
+      <stop offset="100%" stop-color="#145A3A"/>
+    </linearGradient>
+    <linearGradient id="hillGrad" x1="100" y1="100" x2="100" y2="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F9D35"/>
+      <stop offset="100%" stop-color="#0B3D2E"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="72" r="58" stroke="url(#leafGrad)" stroke-width="3" fill="none" opacity="0.35"/>
+  <path d="M72 48 C78 32, 88 28, 96 36 C88 24, 104 20, 112 32" fill="#8DBE3E"/>
+  <path d="M108 32 C116 24, 128 28, 132 40 C124 28, 112 26, 108 32" fill="#4F9D35"/>
+  <path d="M58 62 C58 42, 72 34, 88 38 L88 118 C72 118, 58 108, 58 88 Z" fill="url(#leafGrad)"/>
+  <path d="M88 38 C104 34, 118 42, 118 62 L118 88 C118 108, 104 118, 88 118 Z" fill="url(#leafGrad)" opacity="0.85"/>
+  <path d="M88 62 L118 62 L118 78 L88 78 Z" fill="#FAF8F1" opacity="0.9"/>
+  <path d="M88 86 L118 86 L118 102 L88 102 Z" fill="#FAF8F1" opacity="0.9"/>
+  <path d="M45 118 Q100 108, 155 118" stroke="url(#hillGrad)" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M38 128 Q100 118, 162 128" stroke="url(#hillGrad)" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <path d="M32 138 Q100 128, 168 138" stroke="url(#hillGrad)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.5"/>
+  <text x="100" y="178" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#0B3D2E">EESA</text>
+  <text x="100" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="600" letter-spacing="6" fill="#4F9D35">ORGANICS</text>
+</svg>
