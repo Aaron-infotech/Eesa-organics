@@ -40,19 +40,19 @@ const wellnessArticles = [
     title: 'Benefits of Herbal Tea',
     excerpt:
       'Herbal teas have been enjoyed for centuries as part of daily wellness routines. Discover how natural blends can support relaxation and hydration.',
-    image: 'https://images.unsplash.com/photo-1556678150-b7406000088?w=600&q=80',
+    image: '/products/eesa-herbal-tea.png',
   },
   {
     title: 'Natural Hair Care',
     excerpt:
       'Regular oil massage with herbal oils can nourish the scalp and support healthy-looking hair as part of a natural hair care routine.',
-    image: 'https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=600&q=80',
+    image: '/products/lemongrass-hair-oil.png',
   },
   {
     title: 'Traditional Herbal Ingredients',
     excerpt:
       'From tulsi to lemongrass, traditional herbs have long been valued in self-care. Learn about the ingredients in our products.',
-    image: 'https://images.unsplash.com/photo-1608248543801-ba9777744184?w=600&q=80',
+    image: '/products/herbal-bath-powder.png',
   },
 ];
 
