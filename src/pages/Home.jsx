@@ -9,8 +9,15 @@ import {
 import PageMeta from '../components/PageMeta';
 import HeroSection from '../components/HeroSection';
 import SectionTitle from '../components/SectionTitle';
-import ProductCard from '../components/ProductCard';
-import { getFeaturedProducts } from '../data/products';
+
+const productCategories = [
+  { title: 'Medicine & Ointment', image: '/products/herbal-bath-powder.png' },
+  { title: 'Beauty & Wellness', image: '/products/herbal-face-pack.png' },
+  { title: 'De-addiction & Herbal', image: '/products/digestive-herbal-tea.png' },
+  { title: 'Oil', image: '/products/oil-massage.png' },
+  { title: 'Fragrance', image: '/products/lemongrass-hair-oil.png' },
+  { title: 'Traditional', image: '/products/eesa-herbal-tea.png' },
+];
 
 const whyChooseFeatures = [
   {
@@ -57,8 +64,6 @@ const wellnessArticles = [
 ];
 
 export default function Home() {
-  const featuredProducts = getFeaturedProducts();
-
   return (
     <>
       <PageMeta
@@ -72,14 +77,19 @@ export default function Home() {
         <div className="container">
           <SectionTitle
             label="OUR COLLECTION"
-            title="Explore Our Natural Collection"
-            subtitle="Handcrafted with pure herbs and traditional knowledge."
+            title="Shop by Category"
+            subtitle="Explore natural care inspired by traditional wellness."
             linkText="View All Products →"
             linkTo="/products"
           />
-          <div className="product-grid">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} variant="featured" />
+          <div className="category-grid">
+            {productCategories.map(({ title, image }) => (
+              <Link key={title} to="/products" className="category-card">
+                <img src={image} alt="" loading="lazy" />
+                <span className="category-card__shade" aria-hidden="true" />
+                <h3>{title}</h3>
+                <ArrowRight size={18} aria-hidden="true" />
+              </Link>
             ))}
           </div>
         </div>

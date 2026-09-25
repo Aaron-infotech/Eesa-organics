@@ -7,6 +7,7 @@ import ProductDetails from './pages/ProductDetails';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import Cart from './pages/Cart';
+import Treatments from './pages/Treatments';
 import { CartProvider } from './context/CartContext';
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
               <Route path="/products/:slug" element={<ProductDetails />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/contact" element={<ContactUs />} />
+              <Route path="/treatments" element={<Treatments />} />
             </Routes>
           </main>
           <Footer />

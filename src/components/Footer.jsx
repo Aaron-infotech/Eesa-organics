@@ -12,6 +12,7 @@ import { LOGO_SRC } from '../config/brand';
 const quickLinks = [
   { to: '/', label: 'Home' },
   { to: '/products', label: 'Products' },
+  { to: '/treatments', label: 'Treatments' },
   { to: '/about', label: 'About Us' },
   { to: '/contact', label: 'Contact Us' },
 ];
