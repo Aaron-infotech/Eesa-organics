@@ -11,11 +11,11 @@ import HeroSection from '../components/HeroSection';
 import SectionTitle from '../components/SectionTitle';
 
 const productCategories = [
-  { title: 'Medicine & Ointment', image: '/products/herbal-bath-powder.png' },
-  { title: 'Beauty & Wellness', image: '/products/herbal-face-pack.png' },
-  { title: 'De-addiction & Herbal', image: '/products/digestive-herbal-tea.png' },
-  { title: 'Oil', image: '/products/oil-massage.png' },
-  { title: 'Fragrance', image: '/products/lemongrass-hair-oil.png' },
+  { title: 'Herbal Health Care', image: '/products/herbal-bath-powder.png' },
+  { title: 'Beauty Wellness Care', image: '/products/herbal-face-pack.png' },
+  { title: 'De-addiction ', image: '/products/digestive-herbal-tea.png' },
+  { title: 'Pain Relief', image: '/products/oil-massage.png' },
+  { title: 'Kitchen Care', image: '/products/lemongrass-hair-oil.png' },
   { title: 'Traditional', image: '/products/eesa-herbal-tea.png' },
 ];
 
@@ -83,8 +83,12 @@ export default function Home() {
             linkTo="/products"
           />
           <div className="category-grid">
-            {productCategories.map(({ title, image }) => (
-              <Link key={title} to="/products" className="category-card">
+            {productCategories.map(({ title, image }, index) => (
+              <Link
+                key={title}
+                to="/products"
+                className={`category-card ${index === 0 ? 'category-card--feature' : ''} ${index === 1 ? 'category-card--wide' : ''}`}
+              >
                 <img src={image} alt="" loading="lazy" />
                 <span className="category-card__shade" aria-hidden="true" />
                 <h3>{title}</h3>

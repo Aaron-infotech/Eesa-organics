@@ -70,10 +70,9 @@ export default function Treatments() {
           <div className="treatments-hero__content fade-in">
             <span className="section-title__label">TRADITIONAL WELLNESS CARE</span>
             <h1>Natural Herbal Treatment</h1>
-            <p className="tamil-text treatments-hero__tamil">இயற்கையின் அரவணைப்பில் பாரம்பரிய சிகிச்சை</p>
+            <p className="tamil-text treatments-hero__tamil">இயற்கை சிகிச்சை மையம்</p>
             <p>
-              Thoughtful, traditional care rooted in nature, offered with patience, respect and a
-              focus on your everyday wellbeing.
+              ஈசா ஆர்கானிக்ஸ் & இயற்கை சிகிச்சை மையத்தில் இயற்கை மற்றும் மூலிகை சார்ந்த பொருட்கள், உணவுப் பொருட்கள், அழகு சாதனப் பொருட்கள் மற்றும் பாரம்பரிய மூலிகை தயாரிப்புகள் வழங்கப்படுகின்றன.
             </p>
             <div className="treatments-hero__actions">
               <a
@@ -104,22 +103,7 @@ export default function Treatments() {
         </div>
       </section>
 
-      <section className="section treatments-intro">
-        <div className="container treatments-intro__inner">
-          <div className="treatments-intro__mark" aria-hidden="true"><Leaf size={28} /></div>
-          <div>
-            <SectionTitle label="WELCOME TO EESA ORGANICS" title="Natural care, guided by tradition" />
-            <div className="tamil-copy">
-              <h2 className="tamil-text">ஈசா ஆர்கானிக்ஸ் &amp; இயற்கை சிகிச்சை மையம்</h2>
-              <p className="tamil-text">
-                ஈசா ஆர்கானிக்ஸ் &amp; இயற்கை சிகிச்சை மையத்தில் இயற்கை மற்றும் மூலிகை சார்ந்த பொருட்கள்,
-                உணவுப் பொருட்கள், அழகு சாதனப் பொருட்கள் மற்றும் பாரம்பரிய மூலிகை தயாரிப்புகள்
-                வழங்கப்படுகின்றன.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <section className="section treatments-list" id="treatments">
         <div className="container">
