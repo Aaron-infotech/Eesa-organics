@@ -1,10 +1,11 @@
 export const CATEGORIES = [
   'All',
-  'Hair Care',
-  'Body Care',
-  'Herbal Tea',
-  'Massage Oils',
-  'Other Herbal Products',
+  'Herbal Health Care',
+  'Beauty Wellness Care',
+  'De-addiction',
+  'Pain Relief',
+  'Kitchen Care',
+  'Traditional',
 ];
 
 const productImage = (slug) => `/products/${slug}.png`;
@@ -14,7 +15,7 @@ export const products = [
     id: 'body-cooling-oil',
     name: 'Body Cooling Oil',
     slug: 'body-cooling-oil',
-    category: 'Body Care',
+    category: 'Herbal Health Care',
     price: 249,
     originalPrice: 299,
     size: '100ml',
@@ -31,7 +32,7 @@ export const products = [
     id: 'eesa-herbal-tea',
     name: 'Eesa Herbal Tea',
     slug: 'eesa-herbal-tea',
-    category: 'Herbal Tea',
+    category: 'Herbal Health Care',
     price: 199,
     originalPrice: null,
     size: '50g',
