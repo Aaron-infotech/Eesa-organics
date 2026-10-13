@@ -19,6 +19,7 @@ const DELIVERY_CHARGE = 150;
 
 export default function Cart() {
   const { items, totalItems, totalPrice, updateQuantity, clearCart } = useCart();
+  const hasUnpricedItems = items.some((item) => item.price == null);
   const totalPayable = totalPrice + (items.length > 0 ? DELIVERY_CHARGE : 0);
 
   if (items.length === 0) {
@@ -41,7 +42,7 @@ export default function Cart() {
       <section className="cart-page">
         <div className="cart-page__topbar container">
           <Link to="/products" className="cart-page__back"><ArrowLeft size={17} /> Continue Shopping</Link>
-          <h1><span><ShoppingBag size={21} /></span> Your Organic Farm Cart <em>{totalItems} {totalItems === 1 ? 'Item' : 'Items'}</em></h1>
+          <h1><span><ShoppingBag size={21} /></span> Your Cart <em>{totalItems} {totalItems === 1 ? 'Item' : 'Items'}</em></h1>
           <Link to="/products" className="cart-page__close" aria-label="Close cart"><X size={19} /></Link>
         </div>
 
@@ -59,7 +60,7 @@ export default function Cart() {
                 </Link>
                 <div className="cart-item__details">
                   <h3>{item.name} <span>{item.size}</span></h3>
-                  <p>₹{item.price} per unit</p>
+                  <p>{item.price == null ? 'Contact for price' : `Sample ₹${item.price} per unit`}</p>
                   <div className="cart-item__actions">
                     <div className="cart-stepper" aria-label={`Quantity for ${item.name}`}>
                       <button type="button" onClick={() => updateQuantity(item.id, item.quantity - 1)} aria-label={`Remove one ${item.name}`}><Minus size={14} /></button>
@@ -73,7 +74,7 @@ export default function Cart() {
                 </div>
                 <div className="cart-item__subtotal">
                   <span>SUBTOTAL</span>
-                  <strong>₹{item.price * item.quantity}</strong>
+                  <strong>{item.price == null ? 'Price on request' : `Sample ₹${item.price * item.quantity}`}</strong>
                 </div>
               </article>
             ))}
@@ -81,17 +82,17 @@ export default function Cart() {
 
           <aside className="order-summary">
             <h2>Order Summary</h2>
-            <div className="order-summary__line"><span>Items Subtotal</span><strong>₹{totalPrice}</strong></div>
+            <div className="order-summary__line"><span>Items Subtotal</span><strong>{hasUnpricedItems ? 'Price on request' : `Sample ₹${totalPrice}`}</strong></div>
             <div className="order-summary__line"><span>Delivery Charge <small>(within 30 km)</small></span><strong>₹{DELIVERY_CHARGE}</strong></div>
-            <div className="order-summary__total"><span>Total Payable</span><strong>₹{totalPayable}</strong></div>
+            <div className="order-summary__total"><span>Sample Total Payable</span><strong>{hasUnpricedItems ? 'Confirm on WhatsApp' : `Sample ₹${totalPayable}`}</strong></div>
             <button type="button" className="order-summary__whatsapp" onClick={() => openWhatsApp(buildWhatsAppCartUrl(items))}>
               <MessageCircle size={19} /> Order via WhatsApp Now
             </button>
-            <p className="order-summary__note">Instant order placement directly with farm management via WhatsApp.</p>
+            <p className="order-summary__note">Sample prices only. Confirm actual product prices and package details on WhatsApp.</p>
             <div className="order-summary__benefits">
               <p><ShieldCheck size={16} /> 100% Pure &amp; Organic Guarantee</p>
-              <p><Truck size={16} /> Fresh Morning Farm Dispatch</p>
-              <p><Sparkles size={16} /> No Middlemen · Direct Farm Support</p>
+              <p><Truck size={16} />Dispatch</p>
+              <p><Sparkles size={16} /> No Middlemen · Direct Support</p>
             </div>
           </aside>
         </div>

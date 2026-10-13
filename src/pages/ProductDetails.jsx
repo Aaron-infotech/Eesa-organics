@@ -72,11 +72,17 @@ export default function ProductDetails() {
               <p className="product-details__short">{product.shortDescription}</p>
 
               <div className="product-details__pricing">
-                <span className="product-details__price">₹{product.price}</span>
-                {product.originalPrice && (
-                  <span className="product-details__original">₹{product.originalPrice}</span>
+                {product.price == null ? (
+                  <span className="product-details__price">Contact for price</span>
+                ) : (
+                  <>
+                    <span className="product-details__price">Sample ₹{product.price}</span>
+                    {product.originalPrice && (
+                      <span className="product-details__original">₹{product.originalPrice}</span>
+                    )}
+                    <span className="product-details__size">{product.size}</span>
+                  </>
                 )}
-                <span className="product-details__size">{product.size}</span>
               </div>
 
               <div className="quantity-selector">

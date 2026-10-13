@@ -10,6 +10,7 @@ import SectionTitle from '../components/SectionTitle';
 
 export default function Products() {
   const { items, totalItems, totalPrice } = useCart();
+  const hasUnpricedItems = items.some((item) => item.price == null);
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('All');
 
@@ -100,7 +101,7 @@ export default function Products() {
             <div className="cart-summary__icon"><ShoppingBag size={20} /></div>
             <div>
               <strong>{totalItems} {totalItems === 1 ? 'Item' : 'Items'}</strong>
-              <p>₹{totalPrice} total</p>
+              <p>{hasUnpricedItems ? 'Price on request' : `Price ₹${totalPrice} total`}</p>
             </div>
           </div>
           <Link to="/cart" className="cart-summary__button">

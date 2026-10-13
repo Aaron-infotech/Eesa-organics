@@ -36,7 +36,7 @@ export function CartProvider({ children }) {
       updateQuantity,
       clearCart,
       totalItems: items.reduce((sum, item) => sum + item.quantity, 0),
-      totalPrice: items.reduce((sum, item) => sum + item.price * item.quantity, 0),
+      totalPrice: items.reduce((sum, item) => sum + (item.price ?? 0) * item.quantity, 0),
     }),
     [items],
   );

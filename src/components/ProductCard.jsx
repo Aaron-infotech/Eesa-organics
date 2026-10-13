@@ -58,12 +58,20 @@ export default function ProductCard({ product, variant = 'catalog' }) {
           </Link>
           <div className="product-card__footer">
             <div className="product-card__pricing">
-              {product.originalPrice && (
+                {product.price == null ? (
+                  <span className="product-card__price">Contact for price</span>
+                ) : (
+                  <>
+                    {product.originalPrice && (
                 <span className="product-card__original">₹{product.originalPrice}</span>
-              )}
-              <span className="product-card__price">₹{product.price}</span>
+                    )}
+                    <span className="product-card__price">₹{product.price}</span>
+                  </>
+                )}
             </div>
-            <span className="product-card__qty">Qty: {product.size}</span>
+              <span className="product-card__qty">
+                {product.price == null ? product.size : `Qty: ${product.size}`}
+              </span>
           </div>
         </div>
       </article>
@@ -91,12 +99,20 @@ export default function ProductCard({ product, variant = 'catalog' }) {
         </Link>
         <div className="product-card__footer">
           <div className="product-card__pricing">
-            {product.originalPrice && (
-              <span className="product-card__original">₹{product.originalPrice}</span>
+            {product.price == null ? (
+              <span className="product-card__price">Contact for price</span>
+            ) : (
+              <>
+                {product.originalPrice && (
+                  <span className="product-card__original">₹{product.originalPrice}</span>
+                )}
+                <span className="product-card__price">₹{product.price}</span>
+              </>
             )}
-            <span className="product-card__price">₹{product.price}</span>
           </div>
-          <span className="product-card__qty">Qty: {product.size}</span>
+          <span className="product-card__qty">
+            {product.price == null ? product.size : `Qty: ${product.size}`}
+          </span>
         </div>
       </div>
     </article>

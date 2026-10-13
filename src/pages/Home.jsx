@@ -9,15 +9,12 @@ import {
 import PageMeta from '../components/PageMeta';
 import HeroSection from '../components/HeroSection';
 import SectionTitle from '../components/SectionTitle';
+import { CATEGORIES, products } from '../data/products';
 
-const productCategories = [
-  { title: 'Herbal Health Care', image: '/products/herbal-bath-powder.png' },
-  { title: 'Beauty Wellness Care', image: '/products/herbal-face-pack.png' },
-  { title: 'De-addiction ', image: '/products/digestive-herbal-tea.png' },
-  { title: 'Pain Relief', image: '/products/oil-massage.png' },
-  { title: 'Kitchen Care', image: '/products/lemongrass-hair-oil.png' },
-  { title: 'Traditional', image: '/products/eesa-herbal-tea.png' },
-];
+const productCategories = CATEGORIES.filter((category) => category !== 'All').map((title) => ({
+  title,
+  image: products.find((product) => product.category === title)?.images[0],
+}));
 
 const whyChooseFeatures = [
   {
@@ -44,22 +41,22 @@ const whyChooseFeatures = [
 
 const wellnessArticles = [
   {
-    title: 'Benefits of Herbal Tea',
+    title: 'Traditional Herbal Formulas',
     excerpt:
-      'Herbal teas have been enjoyed for centuries as part of daily wellness routines. Discover how natural blends can support relaxation and hydration.',
-    image: '/products/eesa-herbal-tea.png',
+      'Explore the herbal products in the Eesa Organics collection and ask us for product details.',
+    image: products.find((product) => product.name === 'Asthalex Capsule').images[0],
   },
   {
-    title: 'Natural Hair Care',
+    title: 'Everyday Pain Relief',
     excerpt:
-      'Regular oil massage with herbal oils can nourish the scalp and support healthy-looking hair as part of a natural hair care routine.',
-    image: '/products/lemongrass-hair-oil.png',
+      'Browse the oils and herbal products in our collection. Contact us for availability and usage details.',
+    image: products.find((product) => product.name === 'Pain Niwaran Churna').images[0],
   },
   {
-    title: 'Traditional Herbal Ingredients',
+    title: 'Traditional Essentials',
     excerpt:
-      'From tulsi to lemongrass, traditional herbs have long been valued in self-care. Learn about the ingredients in our products.',
-    image: '/products/herbal-bath-powder.png',
+      'Discover traditional products from our collection and get in touch to learn more.',
+    image: products.find((product) => product.name === 'ஆந்தை விளக்கு').images[0],
   },
 ];
 
