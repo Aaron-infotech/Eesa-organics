@@ -60,7 +60,7 @@ export default function Cart() {
                 </Link>
                 <div className="cart-item__details">
                   <h3>{item.name} <span>{item.size}</span></h3>
-                  <p>{item.price == null ? 'Contact for price' : `Sample ₹${item.price} per unit`}</p>
+                  <p>{item.price == null ? 'Contact for price' : ` ₹${item.price} per unit`}</p>
                   <div className="cart-item__actions">
                     <div className="cart-stepper" aria-label={`Quantity for ${item.name}`}>
                       <button type="button" onClick={() => updateQuantity(item.id, item.quantity - 1)} aria-label={`Remove one ${item.name}`}><Minus size={14} /></button>
@@ -74,7 +74,7 @@ export default function Cart() {
                 </div>
                 <div className="cart-item__subtotal">
                   <span>SUBTOTAL</span>
-                  <strong>{item.price == null ? 'Price on request' : `Sample ₹${item.price * item.quantity}`}</strong>
+                  <strong>{item.price == null ? 'Price on request' : ` ₹${item.price * item.quantity}`}</strong>
                 </div>
               </article>
             ))}
@@ -82,13 +82,13 @@ export default function Cart() {
 
           <aside className="order-summary">
             <h2>Order Summary</h2>
-            <div className="order-summary__line"><span>Items Subtotal</span><strong>{hasUnpricedItems ? 'Price on request' : `Sample ₹${totalPrice}`}</strong></div>
+            <div className="order-summary__line"><span>Items Subtotal</span><strong>{hasUnpricedItems ? 'Price on request' : ` ₹${totalPrice}`}</strong></div>
             <div className="order-summary__line"><span>Delivery Charge <small>(within 30 km)</small></span><strong>₹{DELIVERY_CHARGE}</strong></div>
-            <div className="order-summary__total"><span>Sample Total Payable</span><strong>{hasUnpricedItems ? 'Confirm on WhatsApp' : `Sample ₹${totalPayable}`}</strong></div>
+            <div className="order-summary__total"><span>Total Payable</span><strong>{hasUnpricedItems ? 'Confirm on WhatsApp' : ` ₹${totalPayable}`}</strong></div>
             <button type="button" className="order-summary__whatsapp" onClick={() => openWhatsApp(buildWhatsAppCartUrl(items))}>
               <MessageCircle size={19} /> Order via WhatsApp Now
             </button>
-            <p className="order-summary__note">Sample prices only. Confirm actual product prices and package details on WhatsApp.</p>
+            <p className="order-summary__note">Confirm actual product prices and package details on WhatsApp.</p>
             <div className="order-summary__benefits">
               <p><ShieldCheck size={16} /> 100% Pure &amp; Organic Guarantee</p>
               <p><Truck size={16} />Dispatch</p>

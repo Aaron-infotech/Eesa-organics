@@ -76,7 +76,7 @@ export default function Treatments() {
             </p>
             <div className="treatments-hero__actions">
               <a
-                href="https://wa.me/919876543210?text=Hello%20Eesa%20Organics%2C%20I%20would%20like%20to%20book%20a%20treatment."
+                href="https://wa.me/919842966228?text=Hello%20Eesa%20Organics%2C%20I%20would%20like%20to%20book%20a%20treatment."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="whatsapp-btn"
@@ -103,7 +103,7 @@ export default function Treatments() {
         </div>
       </section>
 
-      
+
 
       <section className="section treatments-list" id="treatments">
         <div className="container">
@@ -142,7 +142,7 @@ export default function Treatments() {
           </div>
           <div className="treatments-cta__actions">
             <a
-              href="https://wa.me/919876543210?text=Hello%20Eesa%20Organics%2C%20I%20would%20like%20to%20enquire%20about%20your%20treatments."
+              href="https://wa.me/919842966228?text=Hello%20Eesa%20Organics%2C%20I%20would%20like%20to%20enquire%20about%20your%20treatments."
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-btn"
